@@ -1,0 +1,30 @@
+<uilab-app-bar
+  companyName="companyName"
+  appName="appName"
+  class="app-bar mat-typography"
+></uilab-app-bar>
+
+<div class="app-body mat-typography">
+  <uilab-nav-rail [items]="appNavigation">
+  </uilab-nav-rail>
+
+  <div class="content-area">
+    <button
+      mat-fab
+      color="warn"
+      aria-label="Example icon button with a home icon"
+    >
+      <mat-icon>home</mat-icon>
+    </button>
+    <button
+      mat-mini-fab
+      color="primary"
+      aria-label="Example icon button with a menu icon"
+    >
+      <mat-icon>menu</mat-icon>
+    </button>
+    <button class="custom-border" mat-button>TEST</button>
+    
+    <testavapps-nx-welcome></testavapps-nx-welcome>
+  </div>
+</div>

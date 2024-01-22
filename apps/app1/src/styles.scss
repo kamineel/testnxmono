@@ -1,0 +1,22 @@
+/* You can add global styles to this file, and also import other style files */
+@use 'sass:map';
+@use '@uilab/scss/typography';
+@use '@uilab/scss/theme';
+@use '@angular/material' as mat;
+
+// https://v15.material.angular.io/guide/theming#reading-hues-from-palettes
+$my-palette: mat.define-palette(mat.$pink-palette);
+@mixin new-border-color {
+  background: mat.get-color-from-palette($my-palette, 'lighter');
+  color: mat.get-color-from-palette($my-palette, 'lighter-contrast');
+  border: 2px solid cyan !important;
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: typography.$uilab-typography-font-family;
+}
