@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { NxWelcomeComponent } from './nx-welcome.component';
 //import { MatLegacyButtonModule as MatButtonModule } from '@angular/material/legacy-button';
 import { MatButtonModule } from '@angular/material/button';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 import { UilabAppBarModule, UilabNavRailModule } from '@uilab/core-angular';
 import { UilabBaseComponentsModule } from '@uilab/base-components-angular';
 
@@ -16,6 +17,7 @@ import { UilabBaseComponentsModule } from '@uilab/base-components-angular';
     UilabAppBarModule,
     UilabNavRailModule,
     UilabBaseComponentsModule,
+    MatCheckboxModule,
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [],

@@ -9,6 +9,11 @@ import { IMenu } from '@uilab/core-angular/app';
 export class AppComponent {
   title = 'app1';
 
+  checked = false;
+  indeterminate = false;
+  labelPosition: 'before' | 'after' = 'after';
+  disabled = false;
+
   appNavigation: IMenu[] = [
     {
       name: 'Settings',
