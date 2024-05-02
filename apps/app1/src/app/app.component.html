@@ -8,6 +8,7 @@
   <uilab-nav-rail [items]="appNavigation"> </uilab-nav-rail>
 
   <div class="content-area">
+    FAB
     <button
       mat-fab
       color="warn"
@@ -15,6 +16,9 @@
     >
       <mat-icon>home</mat-icon>
     </button>
+
+    <br /><br />
+    MINI FAB
     <button
       mat-mini-fab
       color="primary"
@@ -22,11 +26,13 @@
     >
       <mat-icon>menu</mat-icon>
     </button>
+
+    <br /><br />
+    MAT TEXT BUTTON
     <button class="custom-border" mat-button>TEST</button>
 
     <br /><br />
-    <div class="my-area">NEW</div>
-
+    MAT CHECKBOX (Accent color)
     <mat-checkbox
       class="example-margin"
       [(indeterminate)]="indeterminate"
@@ -35,6 +41,21 @@
     >
       I'm a checkbox
     </mat-checkbox>
+
+    <br /><br />
+    MAT PROGRESS BAR (Primary color)
+    <mat-progress-bar
+      class="example-margin"
+      [color]="color"
+      [mode]="mode"
+      [value]="value"
+      [bufferValue]="bufferValue"
+    >
+    </mat-progress-bar>
+
+    <br /><br />
+    BLOCK using mixin
+    <div class="my-area">NEW</div>    
 
     <testavapps-nx-welcome></testavapps-nx-welcome>
   </div>

@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
+import { ThemePalette } from '@angular/material/core';
 import { IMenu } from '@uilab/core-angular/app';
+import { ProgressBarMode } from '@angular/material/progress-bar';
 
 @Component({
   selector: 'testavapps-root',
@@ -24,4 +26,8 @@ export class AppComponent {
       icon: 'navigation--oee-analysis',
     },
   ];
+  color: ThemePalette = 'primary';
+  mode: ProgressBarMode = 'determinate';
+  value = 50;
+  bufferValue = 75;
 }

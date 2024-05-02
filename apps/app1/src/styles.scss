@@ -4,51 +4,36 @@
 @use '@uilab/scss/theme';
 @use '@angular/material' as mat;
 
+$kids-primary: mat.define-palette(mat.$cyan-palette);
+$kids-accent: mat.define-palette(mat.$yellow-palette);
+
+// Typography config based on the default, but using "Arial" as the
+// default font family for all levels.
+$kids-typography: mat.define-typography-config(
+  $font-family: 'Arial',
+);
+
+$kids-theme: mat.define-light-theme(
+  (
+    color: (
+      primary: $kids-primary,
+      accent: $kids-accent,
+    ),
+    typography: $kids-typography,
+  )
+);
 
 @include mat.core();
-
-$my-primary: mat.define-palette(mat.$indigo-palette, 500);
-$my-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
-$my-typography: mat.define-typography-config();
-
-$my-theme: mat.define-light-theme((
- color: (
-   primary: $my-primary,
-   accent: $my-accent,
- ),
-  typography: $my-typography,
-));
-
-@include mat.typography-hierarchy($my-typography);
-@include mat.all-component-themes($my-theme);
-
-// .kids-theme {
-//   $kids-primary: mat.define-palette(mat.$cyan-palette);
-//   $kids-accent: mat.define-palette(mat.$yellow-palette);
-
-//   // Typography config based on the default, but using "Comic Sans" as the
-//   // default font family for all levels.
-//   $kids-typography: mat.define-typography-config(
-//     $font-family: 'Comic Sans',
-//   );
-
-//   $kids-theme: mat.define-light-theme((
-//    color: (
-//      primary: $kids-primary,
-//      accent: $kids-accent,
-//    ),
-//    typography: $kids-typography,
-//   ));
-
-//   @include mat.all-component-themes($kids-theme);
-//}
+@include mat.typography-hierarchy($kids-typography);
+@include mat.all-component-themes($kids-theme);
+@include mat.button-typography($kids-typography);
 
 // https://v15.material.angular.io/guide/theming#reading-hues-from-palettes
 $my-palette: mat.define-palette(mat.$pink-palette);
 @mixin new-border-color {
   background: mat.get-color-from-palette($my-palette, 'lighter');
   color: mat.get-color-from-palette($my-palette, 'lighter-contrast');
-  border: 2px solid cyan !important;
+  border: 2px solid greenyellow !important;
 }
 
 html,

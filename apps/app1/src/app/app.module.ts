@@ -6,8 +6,9 @@ import { NxWelcomeComponent } from './nx-welcome.component';
 //import { MatLegacyButtonModule as MatButtonModule } from '@angular/material/legacy-button';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCheckboxModule } from '@angular/material/checkbox';
-import { UilabAppBarModule, UilabNavRailModule } from '@uilab/core-angular';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { UilabBaseComponentsModule } from '@uilab/base-components-angular';
+import { UilabAppBarModule, UilabNavRailModule } from '@uilab/core-angular';
 
 @NgModule({
   declarations: [AppComponent, NxWelcomeComponent],
@@ -18,6 +19,7 @@ import { UilabBaseComponentsModule } from '@uilab/base-components-angular';
     UilabNavRailModule,
     UilabBaseComponentsModule,
     MatCheckboxModule,
+    MatProgressBarModule,
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [],
