@@ -1,0 +1,7 @@
+// _base.scss
+$primary-color: #7ceb15;
+$secondary-color: #7f3078;
+
+@mixin my-mixin {
+  font-size: 16px;
+}

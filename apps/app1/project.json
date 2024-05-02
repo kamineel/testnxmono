@@ -29,6 +29,9 @@
           "apps/app1/src/styles.scss",
           "node_modules/@uilab/core-angular/scss/index.scss"
         ],
+        "stylePreprocessorOptions": {
+          "includePaths": ["apps"]
+        },
         "scripts": []
       },
       "configurations": {
